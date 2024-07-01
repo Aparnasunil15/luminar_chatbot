@@ -1,0 +1,111 @@
+body, html {
+    width: 100vw;
+    padding: 0px;
+    overflow-x: hidden;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    
+}
+
+.chat-container {
+    width:100vw; /* Set a maximum width for the chat container */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background-color: purple; /* Updated header background color */
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:700;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+.chat-log {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-input, .send-btn, .record-btn {
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.user-input {
+    flex: 1;
+    border: 1px solid #f1d5ed;
+    background-color: #d7c9d59d;
+    height: 25px;
+}
+
+.send-btn, .record-btn {
+    background-color: #6d1d8e;
+    /* color: rgb(213, 180, 219); */
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+.button_icon{
+    color: rgb(255, 255, 255);
+}
+
+.user-input::placeholder{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.user-msg, .bot-msg {
+    margin: 10px 0;
+
+}
+
+.user-msg {
+    text-align: right;
+    color: rgb(183, 0, 255);
+}
+
+.bot-msg {
+    max-width: 70%;
+    
+    text-wrap: wrap;
+    text-align: left;
+    color: rgb(70, 0, 128);
+}
+
+@media only screen and (max-width: 1200px) {
+    .chat-container {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .header {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    .user-input, .send-btn, .record-btn {
+        padding: 15px;
+    }
+}

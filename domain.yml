@@ -1,0 +1,54 @@
+version: "3.1"
+
+intents:
+  - greet
+  - ask_location
+  - ask_courses
+  - ask_admission
+  - ask_fees
+  - goodbye
+
+responses:
+  utter_greet:
+    - text: "Hello, welcome to Luminar Technolab. How can I help you today?"
+
+  utter_iambot:
+    - text: "I am a Rasa bot."
+
+  utter_location:
+    - text: "Luminar Technolab is a certified software training institute located in Kakkanad, near Infopark Cochin, and Mavoor Road Calicut."
+
+  utter_courses:
+    - text: |
+        We offer:
+        - Software Testing Training - Manual & Automation
+        - PYTHON DATA SCIENCE - ML - AI - & Power BI
+        - MEA(R)N Stack Web Development Expert - Angular & React
+        - Python Django - React - Full Stack Web Development Expert
+        - Asp.net MVC with Angular - Full Stack
+        - Best Flutter Training In Kochi (Cochin), & Calicut (Kozhikode)
+        - Java Spring Full Stack Development
+
+  utter_admission:
+    - text: "You can apply by visiting our website and filling out the application form. For more details, visit the admissions section."
+
+  utter_fees:
+    - text: "The fee structure varies by course. Please visit our fees section on the website for detailed information."
+
+  utter_goodbye:
+    - text: "Thank you for contacting Luminar Technolab. Have a nice day!"
+
+actions:
+  - action_fetch_courses
+  - action_fetch_fees
+  - utter_greet
+  - utter_ask_location
+  - utter_ask_courses
+  - utter_ask_admission
+  - utter_ask_fees
+  - utter_goodbye
+  - utter_iamabot
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
